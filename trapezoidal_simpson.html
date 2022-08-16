@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Numerical Integration (Trapezodal & Simpson)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <div class="center">
+            <h3>Numerical Integration</h3>
+            <h4><i>Group 1</i></h4><br>
+            <div class="container">
+                <table>
+                    <tr>
+                        <td><p>Enter function:</p></td>
+                        <td><input type="text" id="value_function" placeholder="f(x)"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Enter value for (a):</p></td>
+                        <td><input type="number" id="value_a" placeholder="a" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Enter value for (b):</p></td>
+                        <td><input type="number" id="value_b" placeholder="b" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Enter number of subinterval (n):</td>
+                        <td><input type="number" id="subinterval" placeholder="n" min="0"></td>
+                    </tr>
+                </table>
+                
+                <div style="text-align: right">
+                    <button onclick="clear_trapezoidal_simpson()">Clear</button>
+                    <button onclick="compute_trapezoidal_simpson()">Compute</button>
+                </div>
+                <hr>
+
+                <table>
+                    <tr>
+                        <td><p><b>Trapezoidal:</b></p></td>
+                        <td><p id="result_trapezoidal">- - -</p></td>
+                        <td><p class="re_left"><b>% Error (Trapezoidal):</b></p></td>
+                        <td><p id="relative_error_trapezoidal">- - - </p></td>
+                    </tr>
+                    <tr>
+                        <td><p><b>Simpson's:</b></p></td>
+                        <td><p id="result_simpson">- - -</p></td>
+                        <td><p class="re_left"><b>% Error (Simpson's):</b></p></td>
+                        <td><p id="relative_error_simpson">- - - </p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
